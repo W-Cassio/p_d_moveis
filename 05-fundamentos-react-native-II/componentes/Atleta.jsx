@@ -38,6 +38,6 @@ const styles = StyleSheet.create({
   },
   texto: {
     fontSize: 20,
-    fontWeight: 600
+    fontWeight: 600,
   }
 })
