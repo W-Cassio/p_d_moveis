@@ -17,10 +17,11 @@ export default function App() {
         {/* HomeScreen */}
         <Tab.Screen name='HomeScreen' component={HomeScreen}
         options={{
-          title: 'Início',
-          headerTitleAlign: 'left',
+          title: 'Tela de Início',
+          headerTitleAlign: 'center',
+          headerTintColor: 'white',
           headerStyle: {
-            backgroundColor: 'yellow'
+            backgroundColor: 'tomato'
           },
           tabBarInactiveTintColor: 'black',
           tabBarActiveTintColor: 'orange',
