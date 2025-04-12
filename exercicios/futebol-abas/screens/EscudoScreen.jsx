@@ -1,4 +1,3 @@
-import { StyleSheet, View } from "react-native";
 import React from "react";
 import { PaperProvider, Card, Text } from "react-native-paper";
 
@@ -10,18 +9,10 @@ export default function EscudoScreen() {
   };
   return (
     <PaperProvider>
-      <View>
-        <Card style={{ margin: 10 }}>
-          <Text>{time.nome}</Text>
-          <Card.Cover
-            source={{
-              uri: { escudo },
-            }}
-          />
-        </Card>
-      </View>
+      <Card style={{ flex: "100%" }}>
+        <Text variant="labelMedium">{time.nome}</Text>
+      </Card>
+      <Card.Cover source={{ uri: time.escudo }} />
     </PaperProvider>
   );
 }
-
-const styles = StyleSheet.create({});
