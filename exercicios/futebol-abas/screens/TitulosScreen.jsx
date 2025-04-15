@@ -1,6 +1,7 @@
 import React from "react";
+import { StyleSheet } from "react-native";
 import { FlatList } from "react-native";
-import { Card, PaperProvider, Title } from "react-native-paper";
+import { Card, PaperProvider, Title, Text } from "react-native-paper";
 
 export default function TitulosScreen() {
   const titulos = [
@@ -24,11 +25,12 @@ export default function TitulosScreen() {
   return (
     <PaperProvider>
       <FlatList
+       style={{ width: "100%" }}
         data={titulos}
         renderItem={({ item }) => (
-          <Card>
+          <Card style={{ width: "90%", margin: 10 }}>
             <Title>{item.nome}</Title>
-            <Text>{item.anos}</Text>
+            <Text>Ano: {item.anos.join(", ")}</Text>
           </Card>
         )}
       />

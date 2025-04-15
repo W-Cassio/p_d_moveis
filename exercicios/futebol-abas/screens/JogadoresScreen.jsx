@@ -1,4 +1,5 @@
 import React from "react";
+import { StyleSheet } from "react-native";
 import { FlatList } from "react-native";
 import { Card, PaperProvider, Paragraph, Title } from "react-native-paper";
 
@@ -40,9 +41,9 @@ export default function JogadoresScreen() {
       <FlatList
         data={jogadores}
         renderItem={({ item }) => (
-          <Card>
+          <Card style={{ width: "90%", margin: 10 }}>
             <Title>{item.nome}</Title>
-            <Card.Cover source={{ uri: item.imagem }} />
+            <Card.Cover style={{ width: "100%", height: 400 }} source={{ uri: item.imagem }} />
           </Card>
         )}
       />
