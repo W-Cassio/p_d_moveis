@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { Image, StyleSheet, Text, View } from 'react-native'
 import { Button, Card } from 'react-native-paper'
 import React from 'react'
 
@@ -14,11 +14,9 @@ export default function ReceitaScreen({navigation, route}) {
           <Text>Nome: {receita.nome}</Text>
           <Text>Tempo de Preparo: {receita.tempoPreparo}</Text>
           <Text>Porções: {receita.porcoes}</Text>
-          <Card.Cover 
-          source={{
-                uri: {receita.imagem}
-            }}
-        />
+          <Image
+            source={{uri: receita.imagem}}
+          />
           <Text>Ingredientes: {receita.ingredientes}</Text>
         </Card.Content>
         
