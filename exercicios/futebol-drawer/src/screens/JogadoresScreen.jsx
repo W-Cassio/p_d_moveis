@@ -1,7 +1,6 @@
-import { StyleSheet, FlatList, Text, View } from "react-native";
+import { StyleSheet, FlatList, Text, View, Image } from "react-native";
 import React from "react";
-import { Card, PaperProvider } from "react-native-paper";
-
+import { Card, PaperProvider, Title } from "react-native-paper";
 
 export default function JogadoresScreen() {
   const jogadores = [
@@ -54,10 +53,16 @@ export default function JogadoresScreen() {
         renderItem={({ item }) => (
           <Card style={{ width: "90%", margin: 10 }}>
             <Title>{item.nome}</Title>
+
             <Card.Cover
               style={{ width: "100%", height: 400 }}
               source={{ uri: item.imagem }}
             />
+            <Card.Content>
+              <Text>Número: {item.numero}</Text>
+              <Text>Posição: {item.posicao}</Text>
+              <Text>Idade: {item.idade}</Text>
+            </Card.Content>
           </Card>
         )}
       />

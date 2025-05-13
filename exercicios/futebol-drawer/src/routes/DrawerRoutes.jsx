@@ -16,8 +16,8 @@ export default function DrawerRoutes() {
         name='EscudoScreen' 
         component={EscudoScreen}
         options={{
-          title: 'Escudos',
-          drawerIcon: ({ color, size }) => <Ionicons name="home" color={color} size={size} />
+          title: 'Escudo',
+          drawerIcon: ({ color, size }) => <Ionicons name="shield" color={color} size={size} />
         }}
         />
 
@@ -26,7 +26,7 @@ export default function DrawerRoutes() {
         component={JogadoresScreen} 
         options={{
           title: 'Jogadores',
-          drawerIcon: ({ color, size }) => <Ionicons name="person" color={color} size={size} />
+          drawerIcon: ({ color, size }) => <Ionicons name="people" color={color} size={size} />
         }}
         />
 
@@ -34,8 +34,8 @@ export default function DrawerRoutes() {
         name='TitulosScreen' 
         component={TitulosScreen} 
         options={{
-          title: 'Titulos',
-          drawerIcon: ({ color, size }) => <Ionicons name="star" color={color} size={size} />
+          title: 'Títulos',
+          drawerIcon: ({ color, size }) => <Ionicons name="trophy" color={color} size={size} />
         }}
         />
     </Drawer.Navigator>
