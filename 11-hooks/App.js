@@ -4,15 +4,22 @@ import { StyleSheet, Text, View } from 'react-native';
 import NomeNumero from './components/NomeNumero';
 import Controle from './components/Controle';
 import NumeroAleatorio from './components/NumeroAleatorio';
+import Pessoa from './components/Pessoa';
+import GeradorNumeroAleatorio from './components/GeradorNumeroAleatorio';
+
 
 export default function App() {
   return (
     <View style={styles.container}>
       <StatusBar style="auto" />
 
+      <Pessoa />
+      <GeradorNumeroAleatorio/>
+
+{/* 
       <NomeNumero/>
       <Controle />
-      <NumeroAleatorio />
+      <NumeroAleatorio /> */}
 
     </View>
   );
@@ -21,7 +28,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: 'aquamarine',
     alignItems: 'center',
     justifyContent: 'center',
   },
