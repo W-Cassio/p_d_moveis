@@ -16,7 +16,7 @@ export default function StackRoutes() {
         name='HomeScreen' 
         component={HomeScreen} 
         options={{
-            title: "Home",
+            title: "Categorias",
             headerTitleAlign: 'center'
         }}/>
 
