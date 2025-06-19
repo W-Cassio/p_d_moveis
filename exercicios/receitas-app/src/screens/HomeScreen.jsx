@@ -1,6 +1,6 @@
-import {FlatList, StyleSheet, Text, View } from 'react-native'
+import {FlatList, StyleSheet } from 'react-native'
 import React from 'react'
-import { Button, Card } from 'react-native-paper'
+import { Button, Card, PaperProvider, Text } from "react-native-paper";
 
 export default function HomeScreen({navigation, route}) {
 
@@ -80,13 +80,14 @@ export default function HomeScreen({navigation, route}) {
     ];
 
   return (
-    <View>
+   <PaperProvider>
       <FlatList
         data={receitas}
         renderItem={({ item }) => (
           <Card style={{ margin: 10 }}>
             <Card.Content>
               <Text>Receita: {item.nome}</Text>
+              <Card.Cover source={{uri: item.imagem}}/>
             </Card.Content>
             <Card.Actions>
               <Button
@@ -100,7 +101,7 @@ export default function HomeScreen({navigation, route}) {
           </Card>
         )}
       />
-    </View>
+    </PaperProvider>
   )
 }
 

@@ -1,7 +1,7 @@
 import { FlatList, StyleSheet, View } from 'react-native'
 import React, { useEffect, useState } from 'react'
 import axios from 'axios';
-import { Card, IconButton, Text} from 'react-native-paper';
+import { Card, Text} from 'react-native-paper';
 
 export default function HomeScreen({navigation}) {
   const [categorias, setCategorias] = useState([]);
@@ -10,11 +10,9 @@ export default function HomeScreen({navigation}) {
     axios.get("https://dummyjson.com/products/category-list")
       .then((response) => {
         setCategorias(response.data);
-        setLoading(false);
       })
       .catch((error) => {
         console.error("Erro ao buscar categorias:", error);
-        setLoading(false);
       });
   }, []);
 
@@ -23,14 +21,13 @@ export default function HomeScreen({navigation}) {
     <View style={styles.container}>
       <FlatList
         data={categorias}
-        keyExtractor={(item) => item}
         renderItem={({ item }) => (
-          <Card
+          <Card 
+            style={{ margin: 8 }}
             onPress={() => navigation.navigate('ListaProdutosScreen', { category: item })}
           >
             <Card.Content >
               <Text variant='displaySmall'>{item}</Text>
-              <IconButton icon="chevron-right" size={24} />
             </Card.Content>
           </Card>
         )}
